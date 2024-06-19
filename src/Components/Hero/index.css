@@ -1,0 +1,12 @@
+#hero {
+  display: grid;
+  align-content: center;
+  min-height: 15vh;
+  background: url("../../assets/images/hero-bg.jpg") no-repeat;
+  background-size: cover;
+  border-image: linear-gradient(
+      hsl(var(--bg-color-dark), 0.9),
+      hsl(var(--bg-color-dark), 1)
+    )
+    50%/50%;
+}
