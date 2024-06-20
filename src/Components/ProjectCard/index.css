@@ -1,0 +1,153 @@
+.project-card {
+  position: relative;
+  background-color: hsl(var(--bg-color-dark));
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas: "content content image image";
+
+  &:nth-of-type(even) {
+    grid-template-areas: "image image content content";
+    border-radius: 8px 0 0 8px;
+
+    .image {
+      border-radius: 8px 0 0 8px;
+    }
+
+    .content {
+      border-right: solid 4px hsl(var(--color-highlight-variant));
+      border-left: none;
+    }
+
+    &::before {
+      right: 0;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    border-radius: 0 8px 8px 0;
+
+    .image {
+      border-radius: 0 8px 8px 0;
+    }
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  &:hover {
+    &::before {
+      width: 16px;
+      height: 100%;
+      background-color: hsl(var(--color-highlight));
+    }
+
+    & .header > .icon {
+      transition: all 0.5s ease-in-out;
+      transform: translate(0.5rem, -0.5rem) rotate(-135deg) scale(1.2) !important;
+    }
+  }
+
+  &::before {
+    content: "";
+    border-color: hsl(var(--bg-color-dark));
+    transition: all 0.5s ease-in-out;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 0px;
+    background-color: hsl(var(--color-highlight-variant));
+  }
+
+  .content {
+    border-left: solid 4px hsl(var(--color-highlight-variant));
+    border-radius: inherit;
+    grid-area: content;
+    padding-inline: 1.5rem;
+    padding-block: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+
+    .header {
+      position: relative;
+      color: hsl(var(--font-color-light-variant));
+
+      .icon {
+        transition: all 0.5s ease-in-out;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transform: rotate(-135deg);
+      }
+    }
+
+    p {
+      margin-block: 1rem;
+    }
+
+    .github {
+      cursor: pointer;
+
+      button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: var(--step-0);
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: hsl(var(--font-color-light));
+        border: none;
+        padding: 0.5rem 1rem;
+        transition: all 0.5s ease-in-out;
+        font-family: "RobotoCondensed";
+
+        .icon {
+          font-size: var(--step-1);
+        }
+
+        a,
+        a:visited {
+          color: hsl(var(--bg-color-dark));
+        }
+
+        &:hover {
+          background-color: hsl(var(--font-color-light), 0.8);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+
+    .tech {
+      margin-block: 0.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      li {
+        font-family: "RobotoCondensed";
+        font-size: var(--step--1);
+        background-color: hsl(var(--color-highlight-variant));
+        border-radius: 1rem;
+        padding-inline: 1rem;
+      }
+    }
+  }
+
+  .image {
+    grid-area: image;
+    padding: 0;
+
+    img {
+      border-radius: inherit;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

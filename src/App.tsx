@@ -4,10 +4,10 @@ import "./App.css";
 
 function App(): JSX.Element {
   return (
-    <>
+    <main>
       <Hero />
       <Projects />
-    </>
+    </main>
   );
 }
 

@@ -1,3 +1,9 @@
 #projects {
   background: hsl(var(--bg-color-dark-variant));
 }
+
+.project-cards {
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 3rem;
+}

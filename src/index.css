@@ -137,11 +137,11 @@ table {
   --bg-color-dark-variant: 214, 8%, 17%;
   --font-color-light: 0, 0%, 100%;
   --font-color-light-variant: 173, 86%, 42%;
-  --font-color-highlight: 27, 96%, 61%;
-  --font-color-highlight-variant: 200, 98%, 39%;
+  --color-highlight: 27, 96%, 61%;
+  --color-highlight-variant: 200, 98%, 39%;
 
   --step--2: clamp(0.5627rem, 0.7403rem + -0.2292vi, 0.6944rem);
-  --step--1: clamp(0.7956rem, 0.8465rem + -0.0656vi, 0.8333rem);
+  --step--1: clamp(0.9rem, 0.9rem + -0.0656vi, 0.95rem);
   --step-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
   --step-1: clamp(1.2rem, 1.0641rem + 0.6796vi, 1.5908rem);
   --step-2: clamp(1.44rem, 1.1585rem + 1.4075vi, 2.2493rem);
@@ -174,20 +174,35 @@ section {
   line-height: 1.9;
   padding: 5rem 1rem;
 
-  div {
+  & > div {
     margin: 0 auto;
-    width: 80ch;
+    width: 1024px;
+    padding: 0 2rem;
   }
 }
 
 h1 {
-  font-size: var(--step-3);
-}
-
-h2 {
   font-size: var(--step-2);
 }
 
-h3 {
+h2 {
   font-size: var(--step-1);
+}
+
+h3 {
+  font-size: var(--step-0);
+}
+
+@media only screen and (max-width: 1200px) {
+  section > div {
+    width: calc(100% - 2rem);
+    margin: 0;
+    padding: 0 1rem;
+  }
+}
+
+a,
+a:visited {
+  color: hsl(var(--font-color-light));
+  text-decoration: none;
 }
