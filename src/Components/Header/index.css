@@ -1,0 +1,14 @@
+#header {
+  font-family: "RobotoCondensed";
+  background-color: hsl(0 0 0 / 0.1);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+  padding-inline: 1rem;
+
+  h1 {
+    padding-block: 1rem;
+  }
+}

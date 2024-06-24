@@ -7,7 +7,11 @@ const Projects = (): JSX.Element => {
     <>
       <section id="projects">
         <div>
-          <h2>Projects</h2>
+          <h2>
+            <span className="code-block">{"<"}</span>
+            My Projects
+            <span className="code-block">{" />"}</span>
+          </h2>
           <div className="project-cards">
             {projectsData.map(
               (project: ProjectsData): JSX.Element => (

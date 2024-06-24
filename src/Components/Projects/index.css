@@ -1,9 +1,14 @@
 #projects {
   background: hsl(var(--bg-color-dark-variant));
-}
+  text-align: center;
 
-.project-cards {
-  display: grid;
-  grid-auto-rows: 1fr;
-  gap: 3rem;
+  h2 {
+    margin-block-end: 2rem;
+  }
+
+  .project-cards {
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 3rem;
+  }
 }
