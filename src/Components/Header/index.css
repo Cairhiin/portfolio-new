@@ -1,14 +1,23 @@
 #header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   font-family: "RobotoCondensed";
-  background-color: hsl(0 0 0 / 0.1);
+  background-color: hsla(0, 13%, 12%, 0.7);
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 1rem;
   padding-inline: 1rem;
+  backdrop-filter: blur(5px);
 
   h1 {
     padding-block: 1rem;
+    color: hsl(var(--font-color-light-variant));
+
+    .lower-text {
+      font-size: var(--step-1);
+    }
   }
 }

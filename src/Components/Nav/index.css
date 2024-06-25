@@ -5,16 +5,31 @@ nav {
     gap: 1rem;
 
     li {
+      position: relative;
       height: 100%;
       display: flex;
+      justify-content: center;
       align-items: center;
       padding-inline: 1rem;
-    }
 
-    li.active {
-      transition: background-color 0.5s ease-in-out;
-      border-bottom: 3px solid hsl(var(--color-highlight));
-      background-color: hsl(var(--color-highlight-variant), 0.1);
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0%;
+        height: 3px;
+        background-color: hsl(var(--color-highlight));
+      }
+
+      &.active::after {
+        transition: width 0.5s ease-in;
+        width: 100%;
+      }
+
+      &.active {
+        background-color: hsl(var(--bg-color-dark-variant));
+        transition: background-color 0.5s ease-in;
+      }
     }
   }
 }
