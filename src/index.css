@@ -133,13 +133,16 @@ table {
 }
 
 :root {
+  /* Colors */
   --bg-color-dark: 214, 9%, 15%;
   --bg-color-dark-variant: 214, 8%, 17%;
   --font-color-light: 0, 0%, 100%;
   --font-color-light-variant: 173, 86%, 42%;
   --color-highlight: 27, 96%, 61%;
   --color-highlight-variant: 200, 98%, 39%;
+  --color-nav-bar: 0, 13%, 12%;
 
+  /* Font Sizes */
   --step--2: clamp(0.5627rem, 0.7403rem + -0.2292vi, 0.6944rem);
   --step--1: clamp(0.9rem, 0.9rem + -0.0656vi, 0.95rem);
   --step-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);

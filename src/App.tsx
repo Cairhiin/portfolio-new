@@ -7,7 +7,7 @@ import "./App.css";
 
 function App(): JSX.Element {
   return (
-    <>
+    <div id="root">
       <Header />
       <main>
         <Hero />
@@ -15,7 +15,7 @@ function App(): JSX.Element {
         <Skills />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

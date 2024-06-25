@@ -1,23 +1,33 @@
-#header {
-  position: sticky;
-  top: 0;
-  z-index: 5;
+header {
   font-family: "RobotoCondensed";
-  background-color: hsla(0, 13%, 12%, 0.7);
   text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 1rem;
-  padding-inline: 1rem;
   backdrop-filter: blur(5px);
 
-  h1 {
-    padding-block: 1rem;
-    color: hsl(var(--font-color-light-variant));
+  &.is-pinned {
+    position: sticky;
+    top: 0;
 
-    .lower-text {
-      font-size: var(--step-1);
+    & > #header-container {
+      max-width: 100%;
+    }
+  }
+
+  #header-container {
+    max-width: 1024px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1rem;
+    padding-inline: 1rem;
+
+    h1 {
+      padding-block: 1rem;
+      color: hsl(var(--font-color-light-variant));
+
+      .lower-text {
+        font-size: var(--step-1);
+      }
     }
   }
 }

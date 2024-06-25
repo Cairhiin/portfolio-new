@@ -25,11 +25,6 @@ nav {
         transition: width 0.5s ease-in;
         width: 100%;
       }
-
-      &.active {
-        background-color: hsl(var(--bg-color-dark-variant));
-        transition: background-color 0.5s ease-in;
-      }
     }
   }
 }
