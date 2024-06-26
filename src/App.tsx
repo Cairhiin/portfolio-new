@@ -7,10 +7,10 @@ import "./App.css";
 
 function App(): JSX.Element {
   return (
-    <div id="root">
+    <div>
+      <Hero />
       <Header />
       <main>
-        <Hero />
         <Projects />
         <Skills />
       </main>

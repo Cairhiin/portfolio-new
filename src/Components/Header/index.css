@@ -1,33 +1,30 @@
 header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   font-family: "RobotoCondensed";
   text-transform: uppercase;
   backdrop-filter: blur(5px);
+  background-color: hsl(var(--bg-color-dark));
 
   &.is-pinned {
-    position: sticky;
-    top: 0;
+    background-color: hsl(var(--color-nav-bar));
 
     & > #header-container {
-      max-width: 100%;
+      max-width: 1024px;
+      transition: max-width 0.5s ease-in-out;
     }
   }
 
   #header-container {
-    max-width: 1024px;
+    max-width: 100%;
     margin-inline: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     gap: 1rem;
     padding-inline: 1rem;
-
-    h1 {
-      padding-block: 1rem;
-      color: hsl(var(--font-color-light-variant));
-
-      .lower-text {
-        font-size: var(--step-1);
-      }
+    transition: max-width 0.5s ease-in-out;
     }
   }
 }

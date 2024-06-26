@@ -5,8 +5,17 @@
   background: url("../../assets/images/hero-bg.jpg") no-repeat;
   background-size: cover;
   border-image: linear-gradient(
-      hsl(var(--bg-color-dark), 0.9),
+      hsl(var(--bg-color-dark), 0.8),
       hsl(var(--bg-color-dark), 1)
     )
     50%/50%;
+
+  h1 {
+    padding-block: 1rem;
+    color: hsl(var(--font-color-light-variant));
+
+    .lower-text {
+      font-size: var(--step-1);
+    }
+  }
 }
