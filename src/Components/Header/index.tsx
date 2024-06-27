@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header ref={ref} className={`${isSticky ? "is-pinned" : ""}`}>
       <div id="header-container">
-        <Nav />
+        <Nav isSticky={isSticky} />
       </div>
     </header>
   );

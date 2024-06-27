@@ -8,23 +8,15 @@ header {
   background-color: hsl(var(--bg-color-dark));
 
   &.is-pinned {
-    background-color: hsl(var(--color-nav-bar));
-
-    & > #header-container {
-      max-width: 1024px;
-      transition: max-width 0.5s ease-in-out;
-    }
+    background-color: hsl(var(--color-nav-bar), 0.9);
   }
 
   #header-container {
-    max-width: 100%;
-    margin-inline: auto;
     display: flex;
     justify-content: center;
+    margin-inline: auto;
     align-items: stretch;
-    gap: 1rem;
     padding-inline: 1rem;
-    transition: max-width 0.5s ease-in-out;
     }
   }
 }
