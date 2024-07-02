@@ -1,27 +1,26 @@
 #skills {
-  text-align: center;
-
   h2 {
-    margin-block-end: 2rem;
+    margin-block-end: var(--spacing-step-1);
+    text-align: center;
   }
 
   h4 {
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: var(--step--1);
   }
 
   .skills-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 0.5rem;
-    row-gap: 3rem;
+    gap: var(--spacing-step-0);
+    row-gap: var(--spacing-step-4);
   }
 
   .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
-    column-gap: 1rem;
+    column-gap: var(--spacing-step-1);
 
     .icon-container {
       display: flex;

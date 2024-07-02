@@ -16,7 +16,7 @@ header {
     justify-content: center;
     margin-inline: auto;
     align-items: stretch;
-    padding-inline: 1rem;
+    padding-inline: var(--spacing-step-1);
     }
   }
 }

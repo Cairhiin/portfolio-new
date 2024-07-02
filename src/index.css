@@ -154,9 +154,17 @@ table {
 
   /* Spacing */
   --section-spacing: 6rem;
-  --spacing-step-0: 1rem;
-  --spacing-step-1: 2rem;
-  --spacing-step-2: 4rem;
+  --spacing-step--1: 0.25rem;
+  --spacing-step-0: 0.5rem;
+  --spacing-step-1: 1rem;
+  --spacing-step-2: 1.5rem;
+  --spacing-step-3: 2rem;
+  --spacing-step-4: 4rem;
+  --spacing-step-5: 5rem;
+
+  /* Border Radius */
+  --border-radius: 0.5rem;
+  --button-border-radius: 0.25rem;
 }
 
 body {

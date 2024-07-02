@@ -6,6 +6,11 @@ const Contact = (): JSX.Element => {
     <>
       <section id="contact">
         <div>
+          <h2>
+            <span className="code-block">{"<"}</span>
+            Contact
+            <span className="code-block">{" />"}</span>
+          </h2>
           <ContactForm />
         </div>
       </section>

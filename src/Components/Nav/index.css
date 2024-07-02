@@ -3,7 +3,7 @@ nav {
     height: 100%;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--spacing-step-1);
     height: 70px;
 
     li {
@@ -12,7 +12,7 @@ nav {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-inline: 1rem;
+      padding-inline: var(--spacing-step-1);
 
       &::after {
         content: "";

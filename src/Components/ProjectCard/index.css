@@ -1,5 +1,5 @@
 .project-card {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   background-color: hsl(var(--bg-color-dark));
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -18,8 +18,8 @@
     border-left: solid 6px hsl(var(--color-highlight-variant));
     border-radius: inherit;
     grid-area: content;
-    padding-inline: 1.5rem;
-    padding-block: 0.5rem;
+    padding-inline: var(--spacing-step-2);
+    padding-block: var(--spacing-step-0);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,7 +27,7 @@
 
     .header {
       position: relative;
-      padding: 0.5rem 0;
+      padding: var(--spacing-step-0) 0;
       color: hsl(var(--font-color-light-variant));
 
       .icon {
@@ -40,22 +40,21 @@
     }
 
     p {
-      margin-block: 1rem;
-      text-align: left;
+      margin-block: var(--spacing-step-1);
     }
 
     .tech {
-      margin-block: 0.25rem;
+      margin-block: var(--spacing-step--1);
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: var(--spacing-step-0);
 
       li {
         font-family: "RobotoCondensed";
         font-size: var(--step--1);
         background-color: hsl(var(--color-highlight-variant));
-        border-radius: 1rem;
-        padding-inline: 1rem;
+        border-radius: var(--spacing-step-1);
+        padding-inline: var(--spacing-step-1);
       }
     }
   }
@@ -84,7 +83,7 @@
     .content,
     .image {
       border: none;
-      border-radius: 8px 8px 0 0;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
     }
   }
 }
@@ -93,7 +92,7 @@
   .project-card {
     &:nth-of-type(odd) {
       .image {
-        border-radius: 0 8px 8px 0;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
       }
 
       &::before {
@@ -105,7 +104,7 @@
       grid-template-areas: "image image content content";
 
       .image {
-        border-radius: 8px 0 0 8px;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
       }
 
       .content {

@@ -11,7 +11,7 @@
     50%/50%;
 
   h1 {
-    padding-block: 1rem;
+    padding-block: var(--spacing-step-1);
     color: hsl(var(--font-color-light-variant));
 
     .lower-text {

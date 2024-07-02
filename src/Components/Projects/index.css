@@ -1,11 +1,14 @@
 #projects {
   background: hsl(var(--bg-color-dark-variant));
-  text-align: center;
-  padding-block-end: 8rem;
+  padding-block-end: calc(var(--spacing-step-5) + 50px);
+
+  h2 {
+    text-align: center;
+  }
 
   .project-cards {
     display: grid;
     grid-auto-rows: 1fr;
-    gap: 4rem;
+    gap: var(--spacing-step-4);
   }
 }

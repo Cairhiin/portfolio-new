@@ -1,3 +1,8 @@
 #contact {
   background: hsl(var(--bg-color-dark-variant));
+
+  h2 {
+    text-align: center;
+    margin-block-end: var(--spacing-step-1);
+  }
 }
