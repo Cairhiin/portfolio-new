@@ -3,10 +3,6 @@
   text-align: center;
   padding-block-end: 8rem;
 
-  h2 {
-    margin-block-end: 2rem;
-  }
-
   .project-cards {
     display: grid;
     grid-auto-rows: 1fr;

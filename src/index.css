@@ -151,6 +151,12 @@ table {
   --step-3: clamp(1.728rem, 1.2228rem + 2.5262vi, 3.1805rem);
   --step-4: clamp(2.0736rem, 1.2306rem + 4.2151vi, 4.4973rem);
   --step-5: clamp(2.4883rem, 1.1419rem + 6.7319vi, 6.3592rem);
+
+  /* Spacing */
+  --section-spacing: 6rem;
+  --spacing-step-0: 1rem;
+  --spacing-step-1: 2rem;
+  --spacing-step-2: 4rem;
 }
 
 body {
@@ -175,7 +181,7 @@ h5 {
 section {
   text-align: left;
   line-height: 1.9;
-  padding: 5rem 1rem;
+  padding: var(--section-spacing) var(--spacing-step-0);
 
   & > div {
     margin: 0 auto;

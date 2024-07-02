@@ -1,7 +1,8 @@
 import Hero from "./Components/Hero";
+import Header from "./Components/Header";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
-import Header from "./Components/Header";
+import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import "./App.css";
 
@@ -13,6 +14,7 @@ function App(): JSX.Element {
       <main>
         <Projects />
         <Skills />
+        <Contact />
       </main>
       <Footer />
     </div>

@@ -7,11 +7,11 @@ import IconButton from "../IconButton";
 import { ProjectsData } from "../../data";
 import "./index.css";
 
-export default function ProjectCard({ project }: { project: ProjectsData }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+const ProjectCard = ({ project }: { project: ProjectsData }): JSX.Element => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView: boolean = useInView(ref);
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     window.open(project.links);
   };
 
@@ -31,12 +31,12 @@ export default function ProjectCard({ project }: { project: ProjectsData }) {
             <h3>{project.name}</h3>
             <FontAwesomeIcon icon={faArrowDown} className="icon" />
           </div>
+          <p>{project.content}</p>
           <ul className="tech">
             {project.tech.map((tech: string) => (
               <li key={tech}>{tech}</li>
             ))}
           </ul>
-          <p>{project.content}</p>
         </div>
         <div className="github">
           <a href={project.links} target="_blank">
@@ -56,4 +56,6 @@ export default function ProjectCard({ project }: { project: ProjectsData }) {
       </div>
     </div>
   );
-}
+};
+
+export default ProjectCard;

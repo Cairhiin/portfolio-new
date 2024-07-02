@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 import { faLaravel } from "@fortawesome/free-brands-svg-icons";
 import { faCss3 } from "@fortawesome/free-brands-svg-icons";
 import { faJs } from "@fortawesome/free-brands-svg-icons";
@@ -67,8 +70,8 @@ const Skills = (): JSX.Element => {
           <span className="code-block">{" />"}</span>
         </h2>
         <div className="skills-container">
-          {skillList.map((skill) => (
-            <Skill key={skill.name} {...skill} />
+          {skillList.map((skill, idx) => (
+            <Skill key={skill.name} {...skill} id={idx} />
           ))}
         </div>
       </div>
@@ -77,14 +80,30 @@ const Skills = (): JSX.Element => {
 };
 
 const Skill = ({
+  id,
   name,
   icon,
 }: {
+  id: number;
   name: string;
   icon: FontAwesomeIconProps["icon"] | string;
 }): JSX.Element => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView: boolean = useInView(ref);
+
   return (
-    <div className="skill">
+    <motion.div
+      ref={ref}
+      layout
+      transition={{
+        opacity: { ease: "ease-in-out" },
+        layout: { duration: 0.5, type: "spring", stiffness: 100 },
+      }}
+      className="skill"
+      style={{
+        order: isInView ? `${id}` : `${id * -1}`,
+      }}
+    >
       <h4>{name}</h4>
       <div className="icon-container">
         {typeof icon !== "string" ? (
@@ -93,7 +112,7 @@ const Skill = ({
           <img src={icon} alt={name} className="icon-image" />
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,6 +2,7 @@ import DungeonAndCats from "../assets/images/dungeonAndCats.png";
 import Reimari from "../assets/images/reimari.png";
 import Bookrater from "../assets/images/bookrater.png";
 import Documenter from "../assets/images/documenter.png";
+import DocumenterStatic from "../assets/images/Documenter_Static.png";
 
 export type ProjectsData = {
   id: number;
@@ -24,6 +25,15 @@ export const projectsData: ProjectsData[] = [
   },
   {
     id: 2,
+    name: "Documenter",
+    content:
+      "Design and implementation of a static information website for Documenter.",
+    img: DocumenterStatic,
+    links: "https://version.aalto.fi/gitlab/vandef2/dungeon-and-cats",
+    tech: ["Wordpress", "Oxygen", "Figma"],
+  },
+  {
+    id: 3,
     name: "Dungeon and Cats",
     content:
       "A topdown RPG roguelike made in C++ with SDL2. The game features a light weight entity component system.",
@@ -32,7 +42,7 @@ export const projectsData: ProjectsData[] = [
     tech: ["SDL2", "SDL Image", "SDL Mixer", "SDL TTF"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Bookrater",
     content:
       "A MEAN stack project for rating books. Browse through books, rate them and see how others rate the books you enjoy.",
@@ -42,7 +52,7 @@ export const projectsData: ProjectsData[] = [
     tech: ["ExpressJS", "Mongoose", "Angular", "TypeScript", "Sass"],
   },
   {
-    id: 4,
+    id: 5,
     name: "Reimari",
     content:
       "A wordpress website for a local newspaper that is distributed weekly.",
