@@ -12,7 +12,7 @@ type Inputs = {
 
 export default function ContactForm() {
   const [success, setSuccess] = useState(false);
-  console.log(import.meta.env);
+
   const {
     register,
     handleSubmit,
