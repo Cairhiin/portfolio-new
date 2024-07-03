@@ -5,4 +5,10 @@
     text-align: center;
     margin-block-end: var(--spacing-step-1);
   }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

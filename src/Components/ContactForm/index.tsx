@@ -1,32 +1,58 @@
 import { useForm, SubmitHandler } from "react-hook-form";
+import "./index.css";
 
 type Inputs = {
-  example: string;
-  exampleRequired: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  message: string;
 };
 
 export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
-  console.log(watch("example")); // watch input value by passing the name of it
-
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit)}>
-      {/* register your input into the hook by invoking the "register" function */}
-      <input defaultValue="test" {...register("example")} />
+      <div className="extended-input-group">
+        <div className="form-input-group">
+          <label htmlFor="firstName">First Name</label>
+          <input {...register("firstName")} name="firstName" />
+        </div>
 
-      {/* include validation with required or other standard HTML validation rules */}
-      <input {...register("exampleRequired", { required: true })} />
-      {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
+        <div className="form-input-group">
+          <label htmlFor="lastName">Last Name</label>
+          <input {...register("lastName")} name="lastName" />
+        </div>
+      </div>
 
+      <div className="form-input-group">
+        <label htmlFor="email">
+          Email <span>*</span>
+        </label>
+        <input
+          {...register("email", { required: true })}
+          name="email"
+          type="email"
+        />
+        {errors.email && <p>A valid email is required!</p>}
+      </div>
+
+      <div className="form-input-group">
+        <label htmlFor="message">
+          Message <span>*</span>
+        </label>
+        <textarea
+          rows={5}
+          {...register("message", { required: true })}
+          name="message"
+        />
+        {errors.message && <p>The message field is required!</p>}
+      </div>
       <input type="submit" />
     </form>
   );

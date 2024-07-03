@@ -141,6 +141,7 @@ table {
   --color-highlight: 27, 96%, 61%;
   --color-highlight-variant: 200, 98%, 39%;
   --color-nav-bar: 0, 13%, 12%;
+  --bg-color-error: 0, 91%, 50%;
 
   /* Font Sizes */
   --step--2: clamp(0.5627rem, 0.7403rem + -0.2292vi, 0.6944rem);
@@ -164,7 +165,7 @@ table {
 
   /* Border Radius */
   --border-radius: 0.5rem;
-  --button-border-radius: 0.25rem;
+  --border-radius-small: 0.25rem;
 }
 
 body {
