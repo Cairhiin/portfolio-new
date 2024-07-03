@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import "./index.css";
 
 type Inputs = {
+  access_key: string;
   firstName: string;
   lastName: string;
   email: string;
@@ -9,12 +11,25 @@ type Inputs = {
 };
 
 export default function ContactForm() {
+  const [success, setSuccess] = useState(false);
+  console.log(import.meta.env);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    data.access_key = import.meta.env.VITE_EMAIL_API_KEY;
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then(() => setSuccess(true));
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -54,6 +69,7 @@ export default function ContactForm() {
         {errors.message && <p>The message field is required!</p>}
       </div>
       <input type="submit" />
+      {success && <div>Your message has been delivered!</div>}
     </form>
   );
 }
