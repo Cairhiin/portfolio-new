@@ -41,6 +41,14 @@ form {
       }
     }
   }
+
+  .submit-button {
+    margin-block: var(--spacing-step-2);
+  }
+
+  .success-message {
+    margin-block: var(--spacing-step-2);
+  }
 }
 
 @media screen and (min-width: 500px) {

@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons/faSpinner";
+import IconButton from "../IconButton";
 import "./index.css";
 
 type Inputs = {
@@ -11,15 +14,19 @@ type Inputs = {
 };
 
 export default function ContactForm() {
-  const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     data.access_key = import.meta.env.VITE_EMAIL_API_KEY;
+    setIsLoading(true);
 
     fetch("https://api.web3forms.com/submit", {
       method: "post",
@@ -28,7 +35,18 @@ export default function ContactForm() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then(() => setSuccess(true));
+    })
+      .then(() => {
+        setSuccess(true);
+        reset();
+      })
+      .catch((err) => {
+        setError(true);
+        console.error(err);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -68,8 +86,24 @@ export default function ContactForm() {
         />
         {errors.message && <p>The message field is required!</p>}
       </div>
-      <input type="submit" />
-      {success && <div>Your message has been delivered!</div>}
+
+      <div className="submit-button">
+        <IconButton
+          icon={isLoading ? faSpinner : faPaperPlane}
+          type="submit"
+          disabled={isLoading}
+          isSpinner={isLoading ? true : false}
+        >
+          Submit
+        </IconButton>
+      </div>
+
+      <div className="success">
+        {success ? "Your message has been delivered!" : ""}
+        {error
+          ? "We were unable to deliver your message. Please try again later."
+          : ""}
+      </div>
     </form>
   );
 }
