@@ -1,1 +1,6 @@
-
+footer {
+  div {
+    text-align: center;
+    padding-block: var(--spacing-step-3);
+  }
+}

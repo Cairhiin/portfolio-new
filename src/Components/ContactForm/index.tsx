@@ -72,7 +72,7 @@ export default function ContactForm() {
           name="email"
           type="email"
         />
-        {errors.email && <p>A valid email is required!</p>}
+        {errors.email ? <p>A valid email is required!</p> : null}
       </div>
 
       <div className="form-input-group">
@@ -84,7 +84,7 @@ export default function ContactForm() {
           {...register("message", { required: true })}
           name="message"
         />
-        {errors.message && <p>The message field is required!</p>}
+        {errors.message ? <p>The message field is required!</p> : null}
       </div>
 
       <div className="submit-button">

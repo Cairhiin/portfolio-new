@@ -11,8 +11,8 @@ const HeroSection = (): JSX.Element => {
             <span className="code-block">{" />"}</span>
           </h1>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
+            I am an experienced full-stack web developer with a degree in
+            International Business who occasionally also designs websites.
           </p>
         </div>
       </section>
