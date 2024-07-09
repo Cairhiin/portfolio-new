@@ -13,11 +13,11 @@ const Contact = (): JSX.Element => {
           </h2>
           <div className="contact-container">
             <div>
-              <h3>Let's Talk!</h3>
+              <h3>Let's Talk</h3>
               <p>
-                I'm always open to new opportunities. If you have an interesting
+                I'm always open to new opportunities: If you have an interesting
                 idea or project and want to collaborate, feel free to contact
-                me.
+                me. I am open for freelance work, just drop me a line.
               </p>
             </div>
             <ContactForm />

@@ -138,7 +138,7 @@ table {
   --bg-color-dark-variant: 214, 8%, 17%;
   --font-color-light: 0, 0%, 100%;
   --font-color-light-variant: 173, 86%, 42%;
-  --color-highlight: 27, 96%, 61%;
+  --color-highlight: 27, 96%, 51%;
   --color-highlight-variant: 200, 98%, 39%;
   --color-highlight-variant-hero: 200, 98%, 65%;
   --color-nav-bar: 0, 13%, 12%;
@@ -167,6 +167,10 @@ table {
   /* Border Radius */
   --border-radius: 0.5rem;
   --border-radius-small: 0.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

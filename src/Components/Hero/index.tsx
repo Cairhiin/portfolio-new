@@ -3,7 +3,7 @@ import "./index.css";
 const HeroSection = (): JSX.Element => {
   return (
     <>
-      <section id="hero">
+      <section id="home">
         <div>
           <h1>
             <span className="code-block">{"<"}</span>Frank{" "}

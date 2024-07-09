@@ -44,6 +44,7 @@ const ProjectCard = ({ project }: { project: ProjectsData }): JSX.Element => {
                 handleClick;
               }}
               icon={faGithub}
+              disabled={false}
             >
               Github
             </IconButton>

@@ -3,6 +3,7 @@
   padding-block-end: calc(var(--spacing-step-5) + 50px);
 
   h2 {
+    margin-block-end: var(--spacing-step-2);
     text-align: center;
   }
 

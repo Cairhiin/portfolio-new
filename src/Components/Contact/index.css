@@ -4,7 +4,7 @@
 
   h2 {
     text-align: center;
-    margin-block-end: var(--spacing-step-1);
+    margin-block-end: var(--spacing-step-4);
   }
 
   & > div {
@@ -16,5 +16,36 @@
   .contact-container {
     width: 100%;
     max-width: 800px;
+
+    h3 {
+      font-size: var(--step-2);
+      color: hsl(var(--color-highlight-variant-hero));
+      text-align: center;
+    }
+
+    p {
+      padding-inline: var(--spacing-step-4);
+      position: relative;
+      margin-block: var(--spacing-step-2);
+
+      &::after,
+      &::before {
+        top: calc(-1 * var(--step-3));
+        font-size: var(--step-5);
+        width: 10px;
+        position: absolute;
+        color: hsl(var(--color-highlight-variant));
+      }
+
+      &::after {
+        right: 2rem;
+        content: "}";
+      }
+
+      &::before {
+        left: 0.5rem;
+        content: "{";
+      }
+    }
   }
 }

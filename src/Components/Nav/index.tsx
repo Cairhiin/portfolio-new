@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "./index.css";
 
-const links = ["Home", "Projects", "Skills", "Contact"];
+const links = ["home", "projects", "skills", "contact"];
 const Nav = ({ isSticky }: { isSticky: boolean }) => {
   const [active, setActive] = useState<string>("");
   return (
