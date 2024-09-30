@@ -9,7 +9,7 @@ export type ProjectsData = {
   name: string;
   content: string;
   img: string;
-  links: string;
+  link: { href: string; icon: string };
   tech: string[];
 };
 
@@ -20,16 +20,23 @@ export const projectsData: ProjectsData[] = [
     content:
       "Full stack work on a mediator application that allows divorce mediators to manage difficult divorce settlements cases in cooperation with clients developed by WorthitIT.",
     img: Documenter,
-    links: "https://version.aalto.fi/gitlab/vandef2/dungeon-and-cats",
+    link: {
+      href: "https://documenter.nl/",
+      icon: "Website",
+    },
+
     tech: ["Laravel", "Inertia", "Vue"],
   },
   {
     id: 2,
-    name: "Documenter",
+    name: "Documenter Static Website",
     content:
       "Design and implementation of a static information website for Documenter.",
     img: DocumenterStatic,
-    links: "https://version.aalto.fi/gitlab/vandef2/dungeon-and-cats",
+    link: {
+      href: "https://documenter.nl/",
+      icon: "Website",
+    },
     tech: ["Wordpress", "Oxygen", "Figma"],
   },
   {
@@ -38,7 +45,11 @@ export const projectsData: ProjectsData[] = [
     content:
       "A topdown RPG roguelike made in C++ with SDL2. The game features a light weight entity component system.",
     img: DungeonAndCats,
-    links: "https://version.aalto.fi/gitlab/vandef2/dungeon-and-cats",
+    link: {
+      href: "https://version.aalto.fi/gitlab/vandef2/dungeon-and-cats",
+      icon: "GitLab",
+    },
+
     tech: ["SDL2", "SDL Image", "SDL Mixer", "SDL TTF"],
   },
   {
@@ -47,8 +58,11 @@ export const projectsData: ProjectsData[] = [
     content:
       "A MEAN stack project for rating books. Browse through books, rate them and see how others rate the books you enjoy.",
     img: Bookrater,
-    links:
-      "https://github.com/Cairhiin/Full-stack-MEAN-course/tree/main/fullstack-MEAN-project",
+    link: {
+      href: "https://github.com/Cairhiin/Bookrater/",
+      icon: "GitHub",
+    },
+
     tech: ["ExpressJS", "Mongoose", "Angular", "TypeScript", "Sass"],
   },
   {
@@ -57,7 +71,10 @@ export const projectsData: ProjectsData[] = [
     content:
       "A wordpress website for a local newspaper that is distributed weekly.",
     img: Reimari,
-    links: "https://reimari.fi",
+    link: {
+      href: "https://reimari.fi/",
+      icon: "Website",
+    },
     tech: ["PHP", "Wordpress", "JavaScript"],
   },
 ];

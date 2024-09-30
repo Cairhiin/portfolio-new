@@ -2,18 +2,31 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGitlab } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import IconButton from "../IconButton";
 import { ProjectsData } from "../../data";
 import "./index.css";
 
+type IconType = {
+  icon: IconDefinition;
+  name: string;
+};
 const ProjectCard = ({ project }: { project: ProjectsData }): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView: boolean = useInView(ref);
 
   const handleClick = (): void => {
-    window.open(project.links);
+    window.open(project.link.href, "_blank");
   };
+
+  const icons: IconType[] = [
+    { icon: faGithub, name: "GitHub" },
+    { icon: faGitlab, name: "GitLab" },
+    { icon: faExternalLinkAlt, name: "Website" },
+  ];
 
   return (
     <div
@@ -32,21 +45,21 @@ const ProjectCard = ({ project }: { project: ProjectsData }): JSX.Element => {
           </div>
           <p>{project.content}</p>
           <ul className="tech">
-            {project.tech.map((tech: string) => (
+            {project.tech?.map((tech: string) => (
               <li key={tech}>{tech}</li>
             ))}
           </ul>
         </div>
         <div className="github">
-          <a href={project.links} target="_blank">
+          <a href={project.link.href} target="_blank">
             <IconButton
               handleClick={() => {
                 handleClick;
               }}
-              icon={faGithub}
+              icon={icons.filter((i) => i.name === project.link.icon)[0]?.icon}
               disabled={false}
             >
-              Github
+              {project.link.icon}
             </IconButton>
           </a>
         </div>

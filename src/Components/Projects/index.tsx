@@ -9,7 +9,7 @@ const Projects = (): JSX.Element => {
         <div>
           <h2>
             <span className="code-block">{"<"}</span>
-            My Projects
+            My Work & Projects
             <span className="code-block">{" />"}</span>
           </h2>
           <div className="project-cards">
