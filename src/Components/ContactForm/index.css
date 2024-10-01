@@ -31,7 +31,7 @@ form {
       border-radius: var(--border-radius-small);
       color: hsl(var(--font-color-light-variant));
       border: none;
-      background-color: hsl(var(--bg-color-dark));
+      background-color: hsl(var(--bg-color-dark-variant));
       padding: var(--spacing-step-1);
 
       &:active,

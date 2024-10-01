@@ -1,4 +1,6 @@
 footer {
+  background: hsl(var(--bg-color-dark-variant));
+
   div {
     text-align: center;
     padding-block: var(--spacing-step-3);

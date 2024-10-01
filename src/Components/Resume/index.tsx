@@ -7,16 +7,22 @@ const Resume = (): JSX.Element => {
       <div>
         <h2>
           <span className="code-block">{"<"}</span>
-          Stronger Together
+          Work Experience
           <span className="code-block">{" />"}</span>
         </h2>
         <div className="resume-container">
-          <ul className="rb">
+          <ul className="resume-timeline">
             {resumeData.map((item) => (
-              <li className="rb-item" ng-repeat="itembx" key={item.id}>
+              <li
+                className="resume-timeline-item"
+                ng-repeat="itembx"
+                key={item.id}
+              >
                 <div className="timestamp">{item.date}</div>
-                <div className="item-title">{item.title}</div>
-                <div className="item-location">{item.location}</div>
+                <div className="item-title">
+                  {item.title}
+                  <span className="item-location">({item.location})</span>
+                </div>
                 <div className="item-description">{item.description}</div>
               </li>
             ))}

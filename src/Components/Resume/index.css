@@ -8,13 +8,13 @@
   }
 }
 
-ul.rb {
-  margin: 2.5em 0;
+ul.resume-timeline {
+  margin-block: var(--spacing-step-2);
   padding: 0;
   display: inline-block;
 }
 
-ul.rb li {
+ul.resume-timeline li {
   list-style: none;
   margin: auto;
   margin-left: 10em;
@@ -24,11 +24,11 @@ ul.rb li {
   position: relative;
 }
 
-ul.rb li:last-child {
+ul.resume-timeline li:last-child {
   border-left: 0;
 }
 
-ul.rb li::before {
+ul.resume-timeline li::before {
   position: absolute;
   left: -18px;
   top: -5px;
@@ -41,25 +41,50 @@ ul.rb li::before {
   transition: all 500ms ease-in-out;
 }
 
-ul.rb li:hover::before {
+ul.resume-timeline li:hover::before {
   border-color: #232931;
   transition: all 1000ms ease-in-out;
 }
 
-ul.rb li .timestamp {
+ul.resume-timeline li .timestamp {
+  text-align: right;
   color: hsl(var(--font-color-light-variant));
-  position: relative;
+  position: absolute;
   width: 200px;
-  font-size: 12px;
+  font-size: 0.8rem;
+  left: -225px;
 }
 
-ul.rb li .item-title {
+ul.resume-timeline li .item-title {
+  text-transform: uppercase;
+  top: -6px;
+  position: relative;
   color: hsl(var(--font-color-light-variant));
   font-weight: 700;
 }
 
-ul.rb li .item-location {
+ul.resume-timeline li .item-location {
+  text-transform: none;
+  margin-inline-start: 0.5rem;
+  font-weight: 400;
+  font-size: var(--step--1);
 }
 
-ul.rb li .item-description {
+ul.resume-timeline li .item-description {
+}
+
+@media screen and (max-width: 1250px) {
+  ul.resume-timeline li {
+    margin-inline-start: 0;
+  }
+
+  ul.resume-timeline li .timestamp {
+    position: relative;
+    left: 0;
+    text-align: left;
+  }
+
+  ul.resume-timeline li .item-title {
+    top: 0;
+  }
 }

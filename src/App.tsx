@@ -13,8 +13,8 @@ function App(): JSX.Element {
       <Header />
       <main>
         <Resume />
-        <Projects />
         <Skills />
+        <Projects />
         <Contact />
       </main>
       <Footer />

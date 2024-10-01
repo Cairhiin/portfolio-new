@@ -1,5 +1,5 @@
 #contact {
-  background: hsl(var(--bg-color-dark-variant));
+  background: hsl(var(--bg-color-dark));
   line-height: 2;
 
   h2 {
