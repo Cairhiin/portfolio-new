@@ -13,6 +13,14 @@ export type ProjectsData = {
   tech: string[];
 };
 
+export type ResumeData = {
+  id: number;
+  title: string;
+  content: string;
+  location: string;
+  date: string;
+};
+
 export const projectsData: ProjectsData[] = [
   {
     id: 1,
@@ -76,5 +84,53 @@ export const projectsData: ProjectsData[] = [
       icon: "Website",
     },
     tech: ["PHP", "Wordpress", "JavaScript"],
+  },
+];
+
+export const resumeData = [
+  {
+    id: 1,
+    title: "Freelance Full Stack Developer",
+    location: "Remote",
+    company: "WorthitIT",
+    description:
+      "Developing a calendar feature for a web application for divorce resolution as well as frontend and backend support in general. The stack used in the application is Laravel, Inertia and Vue with Tailwind.",
+    date: "August 2023 - April 2024",
+  },
+  {
+    id: 2,
+    title: "Web Developer",
+    location: "Hamina, Finland",
+    company: "Hamimedia Oy",
+    description:
+      "Designing, developing and maintaining the website for Reimari, a local newspaper in Hamina. Relevant skills: PHP, WordPress, JavaScript, CSS, HTML.",
+    date: "September 2012 - March 2023",
+  },
+  {
+    id: 3,
+    title: "Contributor",
+    location: "Kouvola, Finland",
+    company: "Insider Student Magazine",
+    description:
+      "Interviewing students and lecturers and writing person profiles. The job also helped me develop my photography and writing skills.",
+    date: "January 2016 - May 2016",
+  },
+  {
+    id: 4,
+    title: "Web Developer",
+    location: "Kotka and Hamina, Finland",
+    company: "H-teksti Ky",
+    description:
+      "Designing, developing and maintaining the website for the local newspapers Poiju in Kotka and, from 2007 onward, Reimari in Hamina. Relevant skills: PHP, WordPress, JavaScript, CSS, HTML.",
+    date: "October 2006 - September 2012",
+  },
+  {
+    id: 5,
+    title: "Web Developer",
+    location: "Kotka, Finland",
+    company: "Poiju Julkaisut Oy",
+    description:
+      "Designing, developing and maintaining the website for the local newspaper Poiju in Kotka. Relevant skills: PHP, WordPress, JavaScript, CSS, HTML.",
+    date: "October 2001 - September 2006",
   },
 ];

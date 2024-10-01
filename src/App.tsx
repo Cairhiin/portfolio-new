@@ -1,5 +1,6 @@
 import Hero from "./Components/Hero";
 import Header from "./Components/Header";
+import Resume from "./Components/Resume";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
@@ -11,6 +12,7 @@ function App(): JSX.Element {
       <Hero />
       <Header />
       <main>
+        <Resume />
         <Projects />
         <Skills />
         <Contact />
