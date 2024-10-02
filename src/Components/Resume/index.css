@@ -75,7 +75,7 @@ ul.resume-timeline li .item-description {
 
 @media screen and (max-width: 1250px) {
   ul.resume-timeline li {
-    margin-inline-start: 0;
+    margin-inline: 1rem;
   }
 
   ul.resume-timeline li .timestamp {
