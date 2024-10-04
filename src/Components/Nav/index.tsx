@@ -45,7 +45,13 @@ const Nav = ({ isSticky }: { isSticky: boolean }) => {
       <ul className="nav-mobile">
         {links.map((link) => (
           <li key={link} className={active === link ? "active" : ""}>
-            <a onClick={() => setActive(link)} href={`#${link}`}>
+            <a
+              onClick={() => {
+                setActive(link);
+                setShow(false);
+              }}
+              href={`#${link}`}
+            >
               {link}
             </a>
           </li>
